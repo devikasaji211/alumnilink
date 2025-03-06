@@ -1,0 +1,39 @@
+.add-internship-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .add-internship-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-internship-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .add-internship-container input,
+  .add-internship-container textarea,
+  .add-internship-container button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .add-internship-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-internship-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+  }
