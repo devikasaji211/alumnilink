@@ -1,0 +1,111 @@
+/* Reports.css */
+
+/* Page container */
+.reports-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Page title */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Filters container */
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Category filter dropdown */
+  .filter-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Search bar */
+  .search-bar {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: auto;  /* Pushes to the left */
+  }
+  /* Grid layout */
+  .reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Report card */
+  .report-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .report-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Report title */
+  .report-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5a189a;
+  }
+  
+  /* Expanded details */
+  .report-details {
+    margin-top: 10px;
+  }
+  
+  .report-description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .report-category {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .report-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+  }
+  
+  /* Report image */
+  .report-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* No reports message */
+  .no-reports {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  

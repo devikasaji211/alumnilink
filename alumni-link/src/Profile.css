@@ -1,110 +1,78 @@
-/* Profile container */
+/* Profile Page Styling */
 .profile-container {
-    width: 50%;
+    max-width: 800px;
     margin: 50px auto;
+    background: white;
+    border-radius: 15px;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-/* Profile Header */
-.profile-header {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Profile Information */
-.profile-info {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #555;
-}
-
-/* Edit Button */
 .edit-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
 }
 
-.edit-button:hover {
-    background-color: #0056b3;
-}
-
-/* Modal Overlay */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.profile-header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-/* Modal Content */
-.modal-content {
-    background: white;
-    padding: 20px;
-    width: 400px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* Form Labels */
-.modal-content label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-/* Form Inputs */
-.modal-content input {
-    width: 90%;
-    padding: 8px;
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e0c3fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-/* Save Button */
-.save-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+.profile-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.profile-role {
     font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 10px;
+    color: gray;
 }
 
-.save-button:hover {
-    background-color: #218838;
+.profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Cancel Button */
-.cancel-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 10px 15px;
+.detail-box {
+    background: #e0c3fc;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.detail-box i {
+    margin-right: 8px;
     font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
 }
 
-.cancel-button:hover {
-    background-color: #c82333;
+.detail-box a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
 }

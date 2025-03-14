@@ -1,39 +1,57 @@
 .add-internship-container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: auto;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
   }
   
-  .add-internship-container h2 {
+  h2 {
     text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .add-internship-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .add-internship-container input,
-  .add-internship-container textarea,
-  .add-internship-container button {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .add-internship-container button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .add-internship-container button:hover {
-    background-color: #0056b3;
+    color: #333;
   }
   
   .error-message {
     color: red;
     text-align: center;
+    margin-bottom: 10px;
   }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

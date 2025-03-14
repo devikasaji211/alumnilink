@@ -1,0 +1,89 @@
+/* Main Container */
+.student-fund-container {
+    width: 70%;
+    max-width: 900px;
+    margin: 5vh auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid purple;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: purple;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Request Submission */
+.request-submission {
+    padding: 20px;
+    border: 2px solid purple;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background: #faf5ff;
+}
+
+/* Input Fields */
+.request-submission input,
+.request-submission textarea {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid purple; /* Change border color to purple */
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.request-submission input:focus,
+.request-submission textarea:focus {
+    border-color: #6a0dad; /* Darker purple on focus */
+    box-shadow: 0px 0px 5px rgba(106, 13, 173, 0.5);
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    background: purple;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: #6a0dad;
+}
+
+/* My Requests Section */
+.my-requests {
+    padding: 20px;
+    border: 2px solid purple;
+    border-radius: 15px;
+    background: #faf5ff;
+}
+
+/* Requests Grid */
+.requests-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Request Cards */
+.request-card {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid purple;
+    background: white;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

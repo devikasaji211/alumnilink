@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Register.css";
 
 const Register = () => {
   const [step, setStep] = useState(1);
@@ -48,7 +49,7 @@ const Register = () => {
       alert(response.data.message);
       setStep(2);
     } catch (error) {
-      setError(error.response?.data?.message || "Error sending OTP.");
+        setError(error.response?.data?.message || "Error sending OTP.");
     }
   };
 
@@ -99,7 +100,7 @@ const Register = () => {
       alert("Registration successful! You can now log in.");
       navigate("/login");
     } catch (error) {
-      setError(error.response?.data?.message || "Something went wrong.");
+        setError(error.response?.data?.message || "Something went wrong.");
     }
   };
 
@@ -168,3 +169,4 @@ const Register = () => {
 };
 
 export default Register;
+

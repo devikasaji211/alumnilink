@@ -1,25 +1,93 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
-
+/backend/node_modules
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+/backend/coverage
 
 # production
 /build
-
+/dist
+/backend/dist
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.backup
+.env*.local
 
+# logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.vs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment Variables
+.env
+.env.development
+.env.test
+.env.production
+.env.backup
+
+# Debug logs
+debug.log
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Optional: OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cache and temp files
+.cache/
+.temp/
+.tmp/
+*.tmp
+*.bak
+.npm
+
+# Optional: Project specific
+.vercel
+.next
+.nuxt
+.output
+
+# Optional: Editor directories and files
+*.launch
+*.sublime-workspace
+*.sublime-project
+.history/
+.project
+.classpath
+.settings/
+*.iml

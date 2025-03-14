@@ -36,8 +36,9 @@ const Dashboard = () => {
   const userName = localStorage.getItem("userName") || "User";
 
   // Define profile and review paths based on user role
-  const profilePath = userRole === "alumni" ? "/alumni/profile" : "/student/profile";
+  //const profilePath = userRole === "alumni" ? "/alumni/profile" : "/student/profile";
   const reviewPath = userRole === "alumni" ? "/AlumniReview" : "/StudentReview";
+  const fundPath = userRole === "alumni" ? "/alumni" : "/student";
 
   // Handle logout
   const handleLogout = () => {
@@ -88,13 +89,19 @@ const Dashboard = () => {
                 <Link to="/view-workshops">View Workshops</Link>
               </li>
             )}
-            <li><Link to="/mentorship">Mentorship</Link></li>
+             {/* <li><Link to="/mentorship">Mentorship</Link></li> */}
+            {/* Mentorship Section - Replaced with Post/View Questions */}
+            {userRole === "student" && <li><Link to="/post-questions">Mentorship</Link></li>}
+            {userRole === "alumni" && <li><Link to="/view-questions">Mentorship</Link></li>}
+
             <li><Link to="/resources">Resources</Link></li>
-            <li><Link to="/messages">Message</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to={fundPath}>Fund Details</Link></li>
+            <li><Link to={userRole === "alumni" ? "/alumni-page" : "/student-page"}>Projects</Link></li>
+
             <li><Link to="/bookmarks">Bookmarks</Link></li>
             <li><Link to={reviewPath}>Reviews</Link></li>
-            <li><Link to={profilePath}>Profile</Link></li>
+            <li><Link to="/reports">Reports</Link></li>
+            <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/login" onClick={handleLogout}>Logout</Link></li>
           </ul>
         </nav>

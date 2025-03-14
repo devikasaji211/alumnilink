@@ -21,6 +21,7 @@ const FrontPage = () => {
                 <div className="auth-buttons">
                     <button className="login-btn" onClick={() => navigate("/login")}>Login</button>
                     <button className="register-btn" onClick={() => navigate("/register")}>Register</button>
+                    <button className="admin-login-btn" onClick={() => navigate("/admin-login")}>Admin Login</button> {/* New Admin Login button */}
                 </div>
             </header>
 

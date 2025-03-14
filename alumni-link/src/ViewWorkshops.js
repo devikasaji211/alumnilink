@@ -49,7 +49,7 @@ const ViewWorkshops = () => {
   // Handle bookmark/unbookmark
   const handleBookmark = async (id) => {
     try {
-      const endpoint = isBookmarked(id) ? `/api/bookmarks/remove/${id}` : "/api/bookmarks/add";
+      const endpoint = isBookmarked(id) ? `//remove/${id}` : "/api/bookmarks/add";
       const response = await axios.post(endpoint, { workshopId: id });
 
       if (response.data.message === "Bookmark added successfully") {

@@ -14,41 +14,41 @@ const AddInternship = () => {
   });
 
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Handle Input Change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Handle Form Submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    setLoading(true);
 
-    // Get the token from localStorage
     const token = localStorage.getItem("token");
-    console.log("Token retrieved:", token); // Debugging: Log the token
 
     if (!token) {
-      alert("No token found. Please log in again.");
-      navigate("/login"); // Redirect to login page
+      setError("No token found. Please log in again.");
+      navigate("/login");
       return;
     }
 
     try {
-      console.log("Sending request with token:", token); // Debugging: Log the token being sent
       const response = await axios.post(
         "http://localhost:5000/api/internships/add",
         formData,
         {
           headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`, // Include the token in the headers
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json", // Include token in headers
           },
         }
       );
-      console.log("Server response:", response.data); // Debugging: Log the response
-      alert("Internship added successfully!");
 
-      // Reset the form
+      alert("Internship added successfully!");
       setFormData({
         title: "",
         company: "",
@@ -58,11 +58,12 @@ const AddInternship = () => {
         duration: "",
       });
 
-      // Redirect to dashboard or internships page
-      navigate("/dashboard");
+      navigate("/internships"); // Redirect to internships page
     } catch (error) {
       console.error("Error adding internship:", error.response?.data?.error || error.message);
       setError(error.response?.data?.error || "Failed to add internship. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -119,11 +120,12 @@ const AddInternship = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit">Add Internship</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Adding..." : "Add Internship"}
+        </button>
       </form>
     </div>
   );
 };
 
 export default AddInternship;
-

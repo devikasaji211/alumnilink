@@ -1,0 +1,123 @@
+/* Register Page Container */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    margin-top:25px;
+    
+  }
+  
+  /* Image Section */
+  .register-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: -260px;
+  }
+  
+  .register-image img {
+    max-width: 59%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Form Wrapper */
+  .register-box {
+    flex: 1;
+    border: 2px solid #925FE2; /* Purple border */
+    border-radius: 10px;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    text-align: center;
+    margin-right: 55px;
+    margin-top: 437px;
+  }
+  
+  /* Heading */
+  .register-box h2 {
+    color: #925FE2;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Fields */
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .register-form input,
+  .register-form select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+  }
+  
+  /* Register Button */
+  .register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #925FE2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-form button:hover {
+    background-color: #5d00b3;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Already have an account */
+  .register-footer {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .register-footer a {
+    color: #8000ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .register-container {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+    }
+  
+    .register-image {
+      display: none; /* Hide image on smaller screens */
+    }
+  
+    .register-box {
+      max-width: 100%;
+    }
+  }

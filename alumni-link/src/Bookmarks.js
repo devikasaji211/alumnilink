@@ -9,7 +9,7 @@ const Bookmarks = () => {
   useEffect(() => {
     const fetchBookmarks = async () => {
       try {
-        const response = await axios.get("/api/bookmarks/my-bookmarks");
+        const response = await axios.get("/api/bookmarks"); // Correct API endpoint
         setBookmarks(response.data);
       } catch (err) {
         console.error("Error fetching bookmarks:", err);
